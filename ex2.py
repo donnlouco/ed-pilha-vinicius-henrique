@@ -20,7 +20,7 @@ class Node:
         self.next = None
 
 
-class Pilha:
+class Stack:
     def __init__(self):
         self.topo = None
         self.size = 0
@@ -48,12 +48,15 @@ class Pilha:
                 lista.append(caracter)
             elif caracter in mapa.keys():
                 if not lista or lista.pop() != mapa[caracter]:
-                    print('Esta desbalanceado')
                     return False
         
         if len(lista) == 0:
             print('Esta balanceado')
+            return True
     
+        else:
+            print('Esta desbalanceada')
+            return False
 
-x = Pilha()
+x = Stack()
 x.balanceamento('((A+B) * C)')
