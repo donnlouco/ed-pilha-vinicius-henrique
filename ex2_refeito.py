@@ -41,3 +41,9 @@ class Stack():
         else:
             print('Esta desbalanceada')
             return False
+        
+
+
+x = Stack()
+x.balanceamento('((A+B) * C)')
+x.balanceamento('((A+B)')

@@ -60,3 +60,4 @@ class Stack:
 
 x = Stack()
 x.balanceamento('((A+B) * C)')
+x.balanceamento('((A+B)')
