@@ -40,4 +40,20 @@ class Pilha:
         return removed.value
     
     def balanceamento(self, value):
+        lista = []
+        mapa = {')': '(', '}': '{', ']': '['}
+
+        for caracter in value:
+            if caracter in mapa.values():
+                lista.append(caracter)
+            elif caracter in mapa.keys():
+                if not lista or lista.pop() != mapa[caracter]:
+                    print('Esta desbalanceado')
+                    return False
         
+        if len(lista) == 0:
+            print('Esta balanceado')
+    
+
+x = Pilha()
+x.balanceamento('((A+B) * C)')
