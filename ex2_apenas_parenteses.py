@@ -47,11 +47,10 @@ class Pilha:
                 if self.topo is None:
                     balanceado = False
                     break
-                else:
-                    self.topo = self.topo.next
+                self.pop()
             else:
                 pass
-        if balanceado == True and self.topo == None:
+        if balanceado == True and not self.topo:
             print('Esta balanceado')
             return True
         else:
