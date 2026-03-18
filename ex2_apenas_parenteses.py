@@ -35,7 +35,7 @@ class Pilha:
         removed = self.topo
         self.topo = self.topo.next
         self.size -= 1
-        return removed
+        return removed.value
     
     def balanco(self, value):
         balanceado = True
