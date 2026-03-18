@@ -46,6 +46,7 @@ class Pilha:
             elif caracter == ')':
                 if self.topo is None:
                     balanceado = False
+                    break
                 else:
                     pointer = self.topo.next
                     self.topo = pointer
@@ -59,4 +60,4 @@ class Pilha:
             return False
         
 p = Pilha()
-p.balanco('((A+B))')
+p.balanco('A+B)')
